@@ -1,4 +1,4 @@
-from typing import Dict, List, Literal, Optional
+from typing import Dict, List
 
 from pydantic import BaseModel, Field
 
@@ -58,22 +58,6 @@ class CaseSummary(BaseModel):
 class CasesListResponse(BaseModel):
     cases: List[CaseSummary]
     total: int                # total number of analyzed cases on disk
-
-
-class JobInfo(BaseModel):
-    case_id: str
-    filename: str
-    kind: Literal["analyze", "reinference"]
-    status: Literal["running", "done", "error"]
-    created_at: str                  # ISO 8601 UTC
-    finished_at: Optional[str] = None
-    current_step: Optional[str] = None
-    elapsed_seconds: float = 0.0
-    error: Optional[str] = None
-
-
-class JobsListResponse(BaseModel):
-    jobs: List[JobInfo]
 
 
 class HealthResponse(BaseModel):
