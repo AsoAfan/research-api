@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+python-multipart
+pydicom
+nibabel
+dicom2nifti
+totalspineseg
+nnunetv2
+# Pre-installed in venv (listed for reference): torch, torchvision, ultralytics,
+# opencv-python, numpy, pillow, scikit-learn, matplotlib.
