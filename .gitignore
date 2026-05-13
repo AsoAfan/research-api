@@ -51,7 +51,7 @@ pnpm-debug.log*
 lerna-debug.log*
 
 # ---------- ML artifacts ----------
-models/
+
 runs/
 evaluations/
 augmented_dataset_split/
